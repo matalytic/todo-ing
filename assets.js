@@ -70,10 +70,15 @@ var todoList = {
 
 // Access display todos button
 var displayTodosButton = document.getElementById('displayTodosButton');
-console.log(displayTodosButton);
+var toggleAllButton = document.getElementById('toggleAllButton');
 
 // Run displayTodos method when someone clicks the display todos button
 
 displayTodosButton.addEventListener("click", function() {
   todoList.displayTodos();  
 });
+
+toggleAllButton.addEventListener('click', function() {
+	todoList.toggleAll();
+});
+
