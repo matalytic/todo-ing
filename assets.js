@@ -43,6 +43,7 @@ var todoList = {
 		this.displayTodos();
 	},
 	
+	//Changes all items based on completed value
 	toggleAll: function() {
 		var totalTodos = this.todos.length;
 		var completedTodos = 0;
@@ -54,15 +55,25 @@ var todoList = {
 		}
 		// Case 1: If everything's true, make everything false
 		if (completedTodos === totalTodos) {
-			for (var i=0; i < totalTodos; i++) {
-				this.todos[i].completed = false;
+			for (var j=0; j < totalTodos; j++) {
+				this.todos[j].completed = false;
 			}
-			// Case 2: Otherwise, make everything true
+		// Case 2: Otherwise, make everything true
 		} else {
-			for (var i=0; i < totalTodos; i++) {
-				this.todos[i].completed = true;
+			for (var k=0; k < totalTodos; k++) {
+				this.todos[k].completed = true;
 			}
 		}
 		this.displayTodos();
 	}
 };
+
+// Access display todos button
+var displayTodosButton = document.getElementById('displayTodosButton');
+console.log(displayTodosButton);
+
+// Run displayTodos method when someone clicks the display todos button
+
+displayTodosButton.addEventListener("click", function() {
+  todoList.displayTodos();  
+});
