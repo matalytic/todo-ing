@@ -74,7 +74,7 @@ var toggleAllButton = document.getElementById('toggleAllButton');
 
 // Run displayTodos method when someone clicks the display todos button
 
-displayTodosButton.addEventListener("click", function() {
+displayTodosButton.addEventListener('click', function() {
   todoList.displayTodos();  
 });
 
