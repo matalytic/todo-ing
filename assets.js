@@ -17,6 +17,7 @@ var todoList = {
 		}	
   },
 	
+  // adds todo items to list
   addTodo: function (todoText) {
     this.todos.push({
 			todoText: todoText,
